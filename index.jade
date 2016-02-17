@@ -1,0 +1,35 @@
+//
+   Created by yeming on 9/2/2016.
+doctype html
+
+head
+    title 多人聊天室
+    meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+    link(type="text/css",rel="stylesheet",href="./style.css")
+    script(src='http://localhost:3000/socket.io/socket.io.js')
+    script(type='text/javascript' src='./jquery-2.2.0.min.js')
+    script(type='text/javascript' src='./client.js')
+body
+    div#loginbox
+        div(style={width:'260px' ,margin:'200px auto;'})
+            input(type='text' style={width:'180px'} name='userName' id='userName' placeholder='请输入用户名')
+            input#login(type='button' style={width: '50px'} value='提交')
+    div#chatbox(style={display: 'none'})
+        div(style="background:#3d3d3d;height: 28px; width: 100%;font-size:12px;")
+            div(style="line-height: 28px;color:#fff;")
+                span(style="text-align:left;margin-left:10px;") Websocket多人聊天室
+                span(style="float:right; margin-right:10px;")
+                    span#showUserName
+                    a#logout(style="color:#fff;") 退出
+        div#doc
+            div#chat
+                div#message.mesage
+                    div#onlineCount(style="background:#EFEFF4; font-size:12px; margin-top:10px; margin-left:10px; color:#666;")
+                div.input-box
+                    div.input
+                        input#content(type='text' maxlength='140' placeholder='请输入聊天内容，按Ctrl提交' name='content')
+                    div.action
+                        input#msgSend(type='button' value="提交")
+                    div(style="font-size: 12px;float:left;position: absolute;width:100%;top:45px;left:10px")
+                    p 如果这个Demo对你有帮助，
+                        a(href="https://github.com/plhwin" target="_blank") 请到Github关注我
