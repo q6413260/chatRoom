@@ -37,7 +37,7 @@ $(function(){
         this.userName = userName;
         $('#showUserName').html(userName);
         scrollToBottom();
-        socket = io.connect('ws://localhost:3000');
+        socket = io.connect('ws://172.19.22.94:3000');
         socket.emit('login', {userId: this.userId, userName: this.userName});
         socket.on('login', function(obj){
             updateSysMsg(obj, 'login');

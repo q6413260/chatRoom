@@ -6,7 +6,7 @@ head
     title 多人聊天室
     meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
     link(type="text/css",rel="stylesheet",href="./style.css")
-    script(src='http://localhost:3000/socket.io/socket.io.js')
+    script(src='http://172.19.22.94:3000/socket.io/socket.io.js')
     script(type='text/javascript' src='./jquery-2.2.0.min.js')
     script(type='text/javascript' src='./client.js')
 body
@@ -20,7 +20,7 @@ body
                 span(style="text-align:left;margin-left:10px;") Websocket多人聊天室
                 span(style="float:right; margin-right:10px;")
                     span#showUserName
-                    a#logout(style="color:#fff;") 退出
+                    a#logout(style="color:#fff;") &nbsp;退出
         div#doc
             div#chat
                 div#message.mesage
@@ -32,4 +32,4 @@ body
                         input#msgSend(type='button' value="提交")
                     div(style="font-size: 12px;float:left;position: absolute;width:100%;top:45px;left:10px")
                     p 如果这个Demo对你有帮助，
-                        a(href="https://github.com/plhwin" target="_blank") 请到Github关注我
+                        a(href="https://github.com/q6413260/chatRoom" target="_blank") 请到Github关注我
